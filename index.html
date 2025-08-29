@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Summary Assistant</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js'></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div class="info-panel">
+            <div class="info-content">
+                <div class="logo">📄</div>
+                <h1>Document Summary Assistant</h1>
+                <p>Your intelligent partner for summarizing PDFs and images instantly. Built with modern technology for fast and accurate results.</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="content-wrapper">
+                
+                <div class="step" id="step1">
+                    <div class="step-header">
+                        <h2>Step 1: Upload Document</h2>
+                    </div>
+                    <div class="card">
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-icon">📁</div>
+                            <div class="upload-text">Drop your document here or click to browse</div>
+                            <div class="upload-subtext">Supports PDF and image files</div>
+                            <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step" id="step2" style="display: none;">
+                    <div class="step-header">
+                        <h2>Step 2: Generate & View Summary</h2>
+                        <button class="new-doc-btn-top" id="newDocBtnTop">Upload New Document</button>
+                    </div>
+                    <div class="card">
+                         <div class="file-info" id="fileInfo">
+                            <div class="file-icon">📝</div>
+                            <div>
+                                <div class="file-name" id="fileName"></div>
+                                <div class="file-size" id="fileSize"></div>
+                            </div>
+                        </div>
+                        <hr class="divider">
+                        <div class="options-section">
+                            <div class="options-title">Summary Length</div>
+                            <div class="length-options">
+                                <button class="length-btn" data-length="short">Short</button>
+                                <button class="length-btn active" data-length="medium">Medium</button>
+                                <button class="length-btn" data-length="long">Long</button>
+                            </div>
+                        </div>
+
+                        <button class="generate-btn" id="generateBtn" disabled>Generate Summary</button>
+
+                        <div class="loading" id="loading">...</div>
+                        <div class="error-message" id="errorMessage"></div>
+                    </div>
+                    
+                    <div class="card summary-section" id="summarySection">
+                         <div class="summary-header">
+                            <div class="summary-title">Generated Summary</div>
+                            <div class="summary-length" id="summaryLengthBadge">Medium</div>
+                        </div>
+                        <div class="summary-content" id="summaryContent"></div>
+                        <div class="action-buttons">
+                            <button class="action-btn" id="copyBtn">📋 Copy Summary</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
