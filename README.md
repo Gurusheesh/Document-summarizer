@@ -1,4 +1,4 @@
-# 📄 Document Summary Assistant
+📄 Document Summary Assistant
 
 Live Demo: [Your Live Application URL Will Go Here]
 
@@ -11,7 +11,7 @@ A modern, responsive web application that generates intelligent summaries from P
 
 This application was built to meet all the requirements outlined in the project specification:
 
-* [cite_start]**Intuitive Document Upload** [cite: 61][cite_start]: A clean user interface allows for easy uploading of PDF and image files (PNG, JPG)[cite: 62]. [cite_start]It supports both a file picker and a full drag-and-drop area for a seamless user experience[cite: 63].
+* Intuitive Document Upload** [cite: 61][cite_start]: A clean user interface allows for easy uploading of PDF and image files (PNG, JPG)[cite: 62]. [cite_start]It supports both a file picker and a full drag-and-drop area for a seamless user experience[cite: 63].
 
 * [cite_start]**Advanced Text Extraction**[cite: 64]:
     * [cite_start]**PDF Parsing**: Utilizes PDF.js to accurately extract text content from multi-page PDF documents[cite: 65].
@@ -53,6 +53,7 @@ Recognizing this limitation, I pivoted to a more robust, professional solution. 
 This decision reflects an understanding of trade-offs and the ability to choose the right tool for the job, resulting in a much more powerful and reliable application that successfully handles a wider variety of real-world documents.
 
 ---
+Note on Security: For this demonstration, the API key is included in the client-side code for ease of deployment. In a production environment, this key would be secured on a backend server and accessed via a serverless function proxy to protect it.
 
 ### 🚀 How to Run Locally
 
