@@ -2,8 +2,7 @@
 
 Live Demo: [Your Live Application URL Will Go Here]
 
-A modern, responsive web application that generates intelligent summaries from PDF and image documents using AI. This project was built as a technical assessment for a Software Engineer position.
-
+A modern, responsive web application that generates intelligent summaries from PDF and image documents using AI.
 ![App Screenshot]()
 
 ---
