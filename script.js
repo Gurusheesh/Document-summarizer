@@ -142,7 +142,7 @@ async function extractTextFromImage(file) {
 }
 
 async function getSummaryFromAPI(text, length) {
-    const API_KEY = "h1utDPMnSvUZVFkMDi9y74h8OMFE8ckt0xRF2eE2"; // Remember to replace this!
+    const API_KEY = "3QR5s5TCT16rYP68dRS16eCaib7NMMuzrfTJOtTl"; // Remember to replace this!
     const API_URL = "https://api.cohere.ai/v1/summarize";
     let apiLength;
     switch(length) {

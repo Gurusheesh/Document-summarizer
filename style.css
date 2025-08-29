@@ -149,8 +149,26 @@ h1, h2, h3, .options-title, .generate-btn {
 
 .error-message { display: none; color: #721c24; background-color: #f8d7da; padding: 15px; border-radius: 8px; text-align: center; }
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     .app-wrapper { flex-direction: column; height: auto; overflow: auto; }
     .info-panel { flex: none; }
     .main-content { flex: none; padding: 20px; }
+} */
+ /* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    body {
+        overflow: auto; /* ADD THIS LINE to allow scrolling on mobile */
+    }
+    .app-wrapper {
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+    }
+    .info-panel {
+        flex: none;
+    }
+    .main-content {
+        flex: none;
+        padding: 20px;
+    }
 }
