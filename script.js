@@ -3,12 +3,11 @@ let selectedLength = 'medium';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js`;
 
-// --- 1. DOM ELEMENTS ---
-// Step Containers
+
 const step1 = document.getElementById('step1');
 const step2 = document.getElementById('step2');
 
-// Other Elements
+
 const uploadArea = document.getElementById('uploadArea');
 const fileInput = document.getElementById('fileInput');
 const fileInfo = document.getElementById('fileInfo');
@@ -25,7 +24,7 @@ const copyBtn = document.getElementById('copyBtn');
 const newDocBtnTop = document.getElementById('newDocBtnTop');
 
 
-// --- 2. EVENT LISTENERS ---
+//   EVENT LISTENERS 
 uploadArea.addEventListener('click', () => fileInput.click());
 uploadArea.addEventListener('dragover', (e) => { e.preventDefault(); uploadArea.classList.add('dragover'); });
 uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('dragover'));
@@ -50,9 +49,9 @@ lengthBtns.forEach(btn => {
 generateBtn.addEventListener('click', async () => {
     if (!selectedFile) { showError('Please upload a document first.'); return; }
     
-    loading.innerHTML = 'Analyzing document...'; // More descriptive loading
+    loading.innerHTML = 'Analyzing document...'; 
     loading.style.display = 'block';
-    generateBtn.style.display = 'none'; // Hide button during load
+    generateBtn.style.display = 'none'; 
     summarySection.style.display = 'none';
     hideError();
 
@@ -94,7 +93,7 @@ copyBtn.addEventListener('click', () => {
 
 newDocBtnTop.addEventListener('click', resetToStep1);
 
-// --- 3. CORE FUNCTIONS ---
+//  CORE FUNCTIONS
 
 function handleFileSelect(file) {
     selectedFile = file;
@@ -106,7 +105,7 @@ function handleFileSelect(file) {
     fileSize.textContent = formatFileSize(file.size);
     generateBtn.disabled = false;
     hideError();
-    // Transition to Step 2
+    
     step1.style.display = 'none';
     step2.style.display = 'block';
 }
@@ -116,13 +115,13 @@ function resetToStep1() {
     fileInput.value = '';
     summarySection.style.display = 'none';
     hideError();
-    // Transition to Step 1
+    
     step2.style.display = 'none';
     step1.style.display = 'block';
 }
 
 async function extractTextFromPDF(file) {
-    // ... (rest of the functions are the same as before)
+    
     const arrayBuffer = await file.arrayBuffer();
     const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
     let fullText = '';
@@ -142,7 +141,7 @@ async function extractTextFromImage(file) {
 }
 
 async function getSummaryFromAPI(text, length) {
-    const API_KEY = "3QR5s5TCT16rYP68dRS16eCaib7NMMuzrfTJOtTl"; // Remember to replace this!
+    const API_KEY = "3QR5s5TCT16rYP68dRS16eCaib7NMMuzrfTJOtTl"; //replace with your actual API key
     const API_URL = "https://api.cohere.ai/v1/summarize";
     let apiLength;
     switch(length) {
@@ -173,7 +172,7 @@ function displaySummary(bulletPoints) {
     summarySection.style.display = 'block';
 }
 
-// --- 4. HELPER FUNCTIONS ---
+
 function formatFileSize(bytes) {
     if (bytes < 1024) return bytes + ' Bytes';
     if (bytes < 1048576) return (bytes / 1024).toFixed(2) + ' KB';

@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #fdfaf6; /* Warm Cream */
-    --panel-bg-color: #1a1a1a; /* Deep Charcoal */
+    --bg-color: #fdfaf6; 
+    --panel-bg-color: #1a1a1a; 
     --primary-text-color: #333333;
     --panel-text-color: #fdfaf6;
     --secondary-text-color: #6c757d;
-    --accent-color: #9d2323; /* Rich Crimson */
+    --accent-color: #9d2323; 
     --accent-color-hover: #8a1c1c;
     --border-color: #e5e5e5;
     --card-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -25,11 +25,11 @@ h1, h2, h3, .options-title, .generate-btn {
 
 .app-wrapper { display: flex; height: 100vh; }
 
-/* --- Left Info Panel --- */
+
 .info-panel {
     flex: 1;
     background-color: var(--panel-bg-color);
-    /* Subtle texture for a classy feel */
+    
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232a2a2a' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     padding: 40px;
     display: flex;
@@ -47,7 +47,7 @@ h1, h2, h3, .options-title, .generate-btn {
     max-width: 400px; margin: 0 auto;
 }
 
-/* --- Right Main Content --- */
+/*  Right Main Content*/
 .main-content {
     flex: 2;
     background-color: #ffffff;
@@ -149,15 +149,11 @@ h1, h2, h3, .options-title, .generate-btn {
 
 .error-message { display: none; color: #721c24; background-color: #f8d7da; padding: 15px; border-radius: 8px; text-align: center; }
 
-/* @media (max-width: 900px) {
-    .app-wrapper { flex-direction: column; height: auto; overflow: auto; }
-    .info-panel { flex: none; }
-    .main-content { flex: none; padding: 20px; }
-} */
- /* --- Mobile Responsiveness --- */
+
+ /*  Mobile Responsiveness  */
 @media (max-width: 900px) {
     body {
-        overflow: auto; /* ADD THIS LINE to allow scrolling on mobile */
+        overflow: auto; /* added this line to allow scrolling on mobile */
     }
     .app-wrapper {
         flex-direction: column;
