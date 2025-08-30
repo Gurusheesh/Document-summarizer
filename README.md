@@ -53,7 +53,7 @@ A modern, responsive web application that generates intelligent summaries from P
     * **PDF.js:** For client-side PDF text extraction.
     * **Tesseract.js:** For client-side Optical Character Recognition (OCR).
 * **Services:**
-* *Cohere API:** For AI-powered summary generation.
+* *Cohere API: For AI-powered summary generation.
   
 * **Deployment:**
     * Hosted on a reliable, scalable service like Netlify or Vercel.
@@ -106,7 +106,7 @@ The application uses **Cohere's Summarization API** to generate intelligent summ
 ---
 Note on Security: For this demonstration, the API key is included in the client-side code for ease of deployment. In a production environment, this key would be secured on a backend server and accessed via a serverless function proxy to protect it.
 
-### 🚀 How to Run Locally
+🚀 How to Run Locally
 
 1.  Clone this repository to your local machine.
 2.  Ensure you have the "Live Server" extension installed in VS Code.
