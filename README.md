@@ -52,11 +52,10 @@ A modern, responsive web application that generates intelligent summaries from P
 * **Libraries:**
     * **PDF.js:** For client-side PDF text extraction.
     * **Tesseract.js:** For client-side Optical Character Recognition (OCR).
-* **Services:**
-* *Cohere API: For AI-powered summary generation.
+
   
 * **Deployment:**
-    * Hosted on a reliable, scalable service like Netlify or Vercel.
+    * Hosted on Vercel.
 
 ---
 
