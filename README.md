@@ -3,7 +3,11 @@
 Live Demo: [document-summarizer-ten.vercel.app](https://document-summarizer-ten.vercel.app/)
 
 A modern, responsive web application that generates intelligent summaries from PDF and image documents using AI.
-![App Screenshot]()
+### Application Workflow
+
+| Step 1: Upload Document | Step 2: View Generated Summary |
+| https://github.com/user-attachments/assets/38e3a163-4f89-4f54-9bad-22e14f08c0a9 | https://github.com/user-attachments/assets/a2b5b081-2710-4c84-b75f-6e05f919a6f9 |  | https://github.com/user-attachments/assets/10c2e9f1-a80a-4279-9545-52d1071d21d7 |
+| | |
 
 ---
 
