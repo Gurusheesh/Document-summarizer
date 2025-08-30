@@ -12,7 +12,7 @@ A modern, responsive web application that generates intelligent summaries from P
  📄 Document Upload
 - Drag & Drop Interface - Intuitive file upload with visual feedback
 - File Type Support - PDF documents and image files (PNG, JPEG, JPG)
-- **File Validation** - Real-time validation with user-friendly error messages
+- File Validation - Real-time validation with user-friendly error messages
 
 ### 🔍 Text Extraction
 - **PDF Processing** - Advanced text extraction using PDF.js library
@@ -45,17 +45,18 @@ A modern, responsive web application that generates intelligent summaries from P
 
 * **Frontend:** HTML5, CSS3, JavaScript (ES6+)
 * **Libraries:**
-    * **PDF.js:** For client-side PDF text extraction[cite: 65].
-    * [cite_start]**Tesseract.js:** For client-side Optical Character Recognition (OCR)[cite: 66].
+    * **PDF.js:** For client-side PDF text extraction.
+    * **Tesseract.js:** For client-side Optical Character Recognition (OCR).
 * **Services:**
-    * [cite_start]**Cohere API:** For AI-powered summary generation[cite: 83].
+* *Cohere API:** For AI-powered summary generation.
+  
 * **Deployment:**
-    * [cite_start]Hosted on a reliable, scalable service like Netlify or Vercel[cite: 75].
+    * Hosted on a reliable, scalable service like Netlify or Vercel.
 
 ---
 
 
-## Technical Approach (200 words)
+## Technical Approach 
 
 **Problem-Solving Strategy**: Built a client-side solution to minimize complexity while maximizing functionality. Used established libraries (PDF.js, Tesseract.js) for reliable text extraction and integrated AI services for intelligent summarization.
 
